@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Story – Gérald Canet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The story of Gérald Canet, Master Pastry Chef & Chocolatier: three generations of passion and French artisanal expertise.">
+  <meta name="robots" content="noarchive">
+  <meta name="googlebot" content="noarchive">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="alternate" hreflang="fr" href="https://gc-signature.com/qui-suis-je/">
+  <link rel="alternate" hreflang="en" href="https://gc-signature.com/en/qui-suis-je/">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    article, section, p { -webkit-text-size-adjust: none; }
+
+    :root { --timeline-gap: 3rem; --chapter-padding: 2rem; }
+
+    .page-top { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 0; text-align: center; }
+    .page-top h1 { font-family: var(--font-display); font-size: 2.5rem; font-weight: 600; color: var(--color-burgundy); margin: 1.5rem 0 1rem; position: relative; display: inline-block; }
+    .page-top h1::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background: linear-gradient(90deg, transparent, var(--color-gold), transparent); }
+
+    .btn-row { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin: 1rem 0; }
+
+    .qsj-hero-intro { max-width: 980px; margin: 0 auto 3rem; padding: 0 1.5rem; text-align: center; animation: fadeInUp 0.8s ease-out 0.2s backwards; }
+    .qsj-hero-intro p { max-width: 820px; margin: 1rem auto 0; font-size: 1.05rem; line-height: 1.8; color: var(--color-gray); }
+    .qsj-hero-intro p strong { color: var(--color-burgundy); font-weight: 600; }
+
+    .timeline-section { position: relative; padding-bottom: 3rem; }
+    .timeline { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; position: relative; }
+    .timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, transparent, var(--color-gold) 10%, var(--color-gold) 90%, transparent); opacity: 0.3; transform: translateX(-50%); z-index: 0; }
+
+    .timeline-item { position: relative; background: rgba(255,255,255,0.85); backdrop-filter: blur(10px); border: 1px solid rgba(212,175,55,0.25); border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.5) inset; padding: var(--chapter-padding); margin: var(--timeline-gap) 0; opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+    .timeline-item.revealed { opacity: 1; transform: translateY(0); }
+    .timeline-item:hover { box-shadow: 0 15px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(212,175,55,0.3); border-color: var(--color-gold); }
+
+    .chapter-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); gap: 2rem; align-items: start; width: 100%; }
+    .timeline-text { min-width: 0; }
+    .chapter-title { font-family: var(--font-display); font-weight: 600; font-size: 1.75rem; margin: 0 0 1.5rem; color: var(--color-burgundy); position: relative; padding-bottom: 0.75rem; }
+    .chapter-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 60px; height: 3px; background: linear-gradient(90deg, var(--color-gold), transparent); }
+    .timeline-text p { font-size: 1rem; line-height: 1.8; color: var(--color-dark); margin: 0 0 1rem; opacity: 0.92; }
+    .timeline-text p:last-child { margin-bottom: 0; }
+    .timeline-text strong { font-weight: 600; color: var(--color-burgundy); }
+
+    .chapter-gallery { display: grid; gap: 1rem; align-content: start; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+    .chapter-gallery div { margin: 0; border-radius: 16px; overflow: hidden; background: white; border: 1px solid rgba(212,175,55,0.2); box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: all 0.4s ease; position: relative; }
+    .chapter-gallery div:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.15), 0 0 0 2px var(--color-gold); border-color: var(--color-gold); }
+    .chapter-gallery img { display: block; width: 100%; height: 170px; object-fit: contain; background: linear-gradient(135deg, #fafafa, #f5f5f5); padding: 0.75rem; transition: transform 0.4s ease; }
+    .chapter-gallery div:hover img { transform: scale(1.05); }
+    .chapter-gallery .wide { grid-column: 1 / -1; }
+    .chapter-gallery .wide img { height: 200px; }
+    .gallery-2cols { grid-template-columns: repeat(2, 1fr); }
+    .gallery-2cols .wide { grid-column: 1 / -1; }
+
+    .timeline-conclusion { max-width: 980px; margin: 3rem auto 0; padding: 0 1.5rem; text-align: center; }
+    .timeline-conclusion p { margin: 0 auto 1.5rem; line-height: 1.8; color: var(--color-gray); font-size: 1.05rem; }
+    .timeline-conclusion p strong { color: var(--color-burgundy); font-weight: 600; }
+
+    .chapter-number { position: absolute; top: -15px; left: 2rem; width: 50px; height: 50px; background: linear-gradient(135deg, var(--color-burgundy), var(--color-burgundy-dark)); border-radius: 50%; border: 3px solid var(--color-gold); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: white; box-shadow: 0 5px 15px rgba(125,31,49,0.4), 0 0 0 4px rgba(212,175,55,0.1); z-index: 10; }
+
+    /* ── Language switcher ── */
+    .lang-switcher { position: fixed; top: 16px; right: 20px; z-index: 10000; display: flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); border: 1px solid rgba(212,175,55,0.4); border-radius: 50px; padding: 5px 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .lang-btn { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 50px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; color: #7d1f31; transition: all 0.25s ease; border: none; background: transparent; cursor: pointer; }
+    .lang-btn:hover { background: rgba(212,175,55,0.15); }
+    .lang-btn.active { background: linear-gradient(135deg, #7d1f31, #5e1423); color: white; }
+    .lang-btn .flag { font-size: 1rem; line-height: 1; }
+    .lang-sep { width: 1px; height: 14px; background: rgba(212,175,55,0.4); }
+
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+
+    @media (max-width: 980px) {
+      :root { --timeline-gap: 2rem; --chapter-padding: 1.5rem; }
+      .timeline::before { display: none; }
+      .chapter-layout { grid-template-columns: 1fr; }
+      .chapter-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 720px; margin: 0 auto; }
+      .gallery-2cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .chapter-number { width: 45px; height: 45px; font-size: 1.1rem; left: 1.5rem; }
+    }
+    @media (max-width: 768px) {
+      .page-top h1 { font-size: 2rem; }
+      .chapter-title { font-size: 1.5rem; }
+      .qsj-hero-intro p, .timeline-text p { font-size: 0.95rem; }
+    }
+    @media (max-width: 640px) {
+      :root { --chapter-padding: 1.25rem; }
+      .chapter-gallery { grid-template-columns: 1fr; max-width: 420px; }
+      .chapter-gallery img { height: 200px; }
+      .gallery-2cols { grid-template-columns: 1fr; }
+      .chapter-number { width: 40px; height: 40px; font-size: 1rem; left: 1rem; top: -12px; }
+      .page-top, .timeline { padding-left: 1rem; padding-right: 1rem; }
+      .lang-switcher { top: 10px; right: 10px; padding: 4px 8px; }
+      .lang-btn { font-size: 0.72rem; padding: 3px 8px; }
+    }
+  </style>
+</head>
+
+<body role="application">
+
+  <!-- Language switcher -->
+  <div class="lang-switcher">
+    <a href="../../qui-suis-je/index.html" class="lang-btn"><span class="flag">🇫🇷</span> FR</a>
+    <div class="lang-sep"></div>
+    <a href="./index.html" class="lang-btn active"><span class="flag">🇬🇧</span> EN</a>
+  </div>
+
+  <div class="golden-particles" aria-hidden="true"></div>
+
+  <div class="page-top fade-in">
+    <div class="btn-row">
+      <a href="../../en/index.html" class="btn-qsj">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M15 8H1M7 14L1 8l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Home</span>
+      </a>
+    </div>
+    <h1>My Story</h1>
+  </div>
+
+  <div class="qsj-hero-intro">
+    <p><strong>A story of French pastry, passion and transmission across three generations.</strong></p>
+    <p>Pastry has always been part of my life. It is a family story — of repeated gestures, of exacting standards passed down and of shared indulgence. A legacy shaped through generations, between French tradition and contemporary creativity, which I carry forward today with the same passion.</p>
+  </div>
+
+  <div class="timeline-section">
+    <div class="timeline">
+
+      <!-- CHAPTER 1 – Normandy -->
+      <div class="timeline-item">
+        <div class="chapter-number" aria-hidden="true">1</div>
+        <div class="chapter-layout">
+          <div class="timeline-text">
+            <h2 class="chapter-title">Where it all began</h2>
+            <p>My passion for pastry has its roots in <strong>Normandy</strong>. My grandfather was already an <strong>accomplished pastry chef</strong>, driven by a love of craftsmanship and respect for quality ingredients.</p>
+            <p>He ran <strong>the Auberge Normande in Briouze</strong> — a warm and welcoming inn where homemade desserts held a special place. The sweet aromas, the precise gestures, the care given to wedding cakes and grand occasions were already part of daily family life.</p>
+            <p>It is in this spirit of <strong>transmission, authenticity and sharing</strong> that this story began.</p>
+          </div>
+          <div class="chapter-gallery">
+            <div><img src="../../images/grand-pere-2.jpg" alt="Wedding cake made by my grandfather" loading="lazy"></div>
+            <div><img src="../../images/grand-pere-3.jpg" alt="Memory from the Auberge Normande in Briouze" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 2 – Monaco -->
+      <div class="timeline-item">
+        <div class="chapter-number" aria-hidden="true">2</div>
+        <div class="chapter-layout">
+          <div class="timeline-text">
+            <h2 class="chapter-title">The family house</h2>
+            <p>My parents wrote a major chapter of this adventure by running a pastry shop in the <strong>Principality of Monaco for over 35 years</strong>.</p>
+            <p>I grew up in that world, surrounded by a naturally <strong>sweet and chocolatey atmosphere</strong>, where the smells, the techniques and the demands of the craft were part of everyday life.</p>
+            <p>My father, widely recognised for his expertise, was during that time the <strong>official supplier to Prince Rainier III</strong> and was awarded <strong>Best Pastry Chef of the Year 2000</strong> by the Champérard Guide.</p>
+            <p>It was during the <strong>fifteen years spent working alongside them</strong> that I truly learned this craft — with precision and a commitment to excellence.</p>
+          </div>
+          <div class="chapter-gallery gallery-2cols">
+            <div class="wide"><img src="../../images/monaco-1.jpg" alt="Family memory at the Monaco pastry shop" loading="lazy"></div>
+            <div><img src="../../images/monaco-2.jpg" alt="Memory at the Monaco pastry shop" loading="lazy"></div>
+            <div><img src="../../images/monaco-3.jpg" alt="Memory at the Monaco pastry shop" loading="lazy"></div>
+            <div class="wide"><img src="../../images/monaco-4.jpg" alt="Press article – award" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 3 – Menton -->
+      <div class="timeline-item">
+        <div class="chapter-number" aria-hidden="true">3</div>
+        <div class="chapter-layout">
+          <div class="timeline-text">
+            <h2 class="chapter-title">My own path</h2>
+            <p>In Menton, I chose to forge my own path — first at the municipal market halls, then by opening <strong>my own Salon Gourmand</strong> on the Esplanade des Sablettes.</p>
+            <p>A demanding entrepreneurial journey, shaped by hard work, self-questioning and passion — throughout which <strong>my wife Claire was always by my side</strong>. Her unwavering support, her help and her presence, even in the most challenging moments, were essential to making this project a success.</p>
+            <p>Our twins would occasionally come in to <strong>lend their dad a hand</strong>, in a joyful, family atmosphere — simply for the pleasure of sharing those moments together.</p>
+            <p>That chapter in Menton left a deep mark on my journey. It is the foundation on which everything that followed naturally grew.</p>
+          </div>
+          <div class="chapter-gallery">
+            <div class="wide"><img src="../../images/menton-1.jpg" alt="Salon Gourmand in Menton" loading="lazy"></div>
+            <div><img src="../../images/menton-2.jpg" alt="Moments at the Salon Gourmand" loading="lazy"></div>
+            <div><img src="../../images/menton-3.jpg" alt="Creations in Menton" loading="lazy"></div>
+            <div><img src="../../images/menton-4.jpg" alt="The family team" loading="lazy"></div>
+            <div><img src="../../images/menton-5.jpg" alt="Memories from Menton" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAPTER 4 – Mauritius -->
+      <div class="timeline-item">
+        <div class="chapter-number" aria-hidden="true">4</div>
+        <div class="chapter-layout">
+          <div class="timeline-text">
+            <h2 class="chapter-title">Today</h2>
+            <p>Now based in Mauritius, I continue this family tradition by offering an <strong>exceptional French pastry experience</strong>, crafted entirely to order.</p>
+            <p>Weddings, private events, corporate clients or hotels — each creation reflects this journey: heritage, artisanal standards and an enduring passion.</p>
+          </div>
+          <div class="chapter-gallery">
+            <div><img src="../../images/maurice-1.jpg" alt="Wedding cake on the beach in Mauritius" loading="lazy"></div>
+            <div><img src="../../images/maurice-2.jpg" alt="Wedding cake at sunset in Mauritius" loading="lazy"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="timeline-conclusion">
+      <p><strong>Every creation is first and foremost a meeting of minds.</strong><br>A moment to share, a story to write together.</p>
+      <div class="cta-qsj cta-qsj--global" style="margin-top: 1.5rem;">
+        <span class="cta-line"></span>
+        <a href="../../en/index.html" class="btn-qsj">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M15 8H1M7 14L1 8l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Back to home</span>
+        </a>
+        <span class="cta-line"></span>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/23055020109?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20a%20pastry%20creation."
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor">
+      <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-.646-7.07-1.87l-.507-.292-4.713 1.262 1.262-4.669-.292-.508c-1.207-2.1-1.847-4.507-1.847-6.924 0-7.435 6.050-13.485 13.485-13.485s13.485 6.050 13.485 13.485c0 7.435-6.050 13.485-13.485 13.485zM21.960 18.735c-.347-.174-2.051-1.012-2.369-1.128-.318-.116-.549-.174-.780.174s-.897 1.128-1.099 1.360c-.202.231-.405.260-.751.087-.347-.174-1.464-.540-2.788-1.721-1.031-.919-1.727-2.054-1.929-2.401-.202-.347-.022-.535.152-.708.156-.155.347-.405.520-.607.174-.202.231-.347.347-.578.116-.231.058-.433-.029-.607s-.780-1.88-1.070-2.574c-.282-.676-.567-.584-.780-.595-.202-.010-.433-.012-.665-.012s-.607.087-.925.433c-.318.347-1.213 1.186-1.213 2.892s1.242 3.355 1.416 3.587c.174.231 2.445 3.733 5.922 5.235.827.357 1.473.571 1.977.731.831.263 1.586.226 2.183.137.666-.099 2.051-.839 2.340-1.649.289-.810.289-1.504.202-1.649s-.318-.231-.665-.405z"/>
+    </svg>
+    <span class="whatsapp-text">WhatsApp Quote</span>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+      document.querySelectorAll('.timeline-item').forEach(item => observer.observe(item));
+    });
+  </script>
+</body>
+</html>

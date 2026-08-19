@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarifs Pâtisserie – Entremets, Pièces Montées & Croquembouche à Maurice | GC Signature</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="tarifs pâtisserie Maurice, prix pièces montées île Maurice, tarifs croquembouche Maurice, prix entremets Maurice, gâteau mariage prix Maurice, pâtisserie sur commande Grand Baie">
+  <meta name="description" content="Tarifs des créations de Gérald Canet : entremets, tartes, pièces cocktails, macarons, cookies et pièces montées à l'Île Maurice. Prix détaillés par format et nombre de personnes. Livraison dans le Nord de Maurice.">
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Page Tarifs ─────────────────────────────── */
+    .tarifs-page {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .page-top {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 0;
+      text-align: center;
+    }
+
+    .page-top h1 {
+      font-family: var(--font-display);
+      font-size: 2.75rem;
+      font-weight: 600;
+      color: var(--color-burgundy);
+      margin: 1.5rem 0 1rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .page-top h1::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    }
+
+    .page-intro {
+      text-align: center;
+      max-width: 700px;
+      margin: 1.5rem auto 1rem;
+      font-size: 1.05rem;
+      color: var(--color-gray);
+      line-height: 1.7;
+    }
+
+    /* ── Navigation catégories ───────────────────── */
+    .cat-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 2rem auto 3rem;
+      max-width: 800px;
+    }
+
+    .cat-nav a {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+      color: var(--color-burgundy);
+      border: 1px solid rgba(212,175,55,0.4);
+      border-radius: 50px;
+      padding: 0.45rem 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      background: rgba(255,255,255,0.6);
+    }
+
+    .cat-nav a:hover {
+      background: var(--color-gold);
+      color: #fff;
+      border-color: var(--color-gold);
+    }
+
+    /* ── Titre de section ────────────────────────── */
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--color-burgundy);
+      text-align: center;
+      margin: 3.5rem 0 0.3rem;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    }
+
+    .section-wrap {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── Carte produit avec photo ────────────────── */
+    .produit-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 20px;
+      margin: 1.5rem 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      transition: all 0.4s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .produit-card.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .produit-card:hover {
+      border-color: var(--color-gold);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .produit-photo {
+      width: 200px;
+      height: 100%;
+      min-height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .produit-photo-placeholder {
+      width: 200px;
+      min-height: 160px;
+      background: linear-gradient(135deg, var(--color-rose-light, #f3d9df), var(--color-rose, #e8b4bc));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .produit-photo-placeholder .ph-icon {
+      font-size: 2.5rem;
+      opacity: 0.6;
+    }
+
+    .produit-photo-placeholder .ph-name {
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      color: var(--color-burgundy);
+      opacity: 0.6;
+      letter-spacing: 0.05em;
+      text-align: center;
+      padding: 0 0.5rem;
+    }
+
+    .produit-body {
+      display: flex;
+      flex-direction: column;
+      padding: 1.2rem 1.5rem;
+    }
+
+    .produit-top {
+      margin-bottom: 1rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+    }
+
+    .produit-name {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--color-burgundy);
+      margin: 0 0 0.4rem;
+    }
+
+    .produit-desc {
+      font-size: 0.9rem;
+      color: var(--color-gray);
+      font-style: italic;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* ── Grille de prix ──────────────────────────── */
+    .prix-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      flex: 1;
+      align-items: center;
+    }
+
+    .prix-cell {
+      text-align: center;
+      padding: 0.6rem 0.3rem;
+      border-right: 1px solid rgba(212,175,55,0.15);
+    }
+
+    .prix-cell:last-child {
+      border-right: none;
+    }
+
+    .prix-pers {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--color-gold);
+      letter-spacing: 0.08em;
+      margin-bottom: 0.2rem;
+      text-transform: uppercase;
+    }
+
+    .prix-montant {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-burgundy);
+    }
+
+    .prix-taille {
+      font-size: 0.65rem;
+      color: var(--color-gray);
+      margin-top: 0.15rem;
+      opacity: 0.8;
+    }
+
+    /* ── Section Cocktails ───────────────────────── */
+    .cocktail-tarifs {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 20px;
+      padding: 1.5rem 2rem 2rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.4s ease;
+    }
+
+    .cocktail-tarifs.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .cocktail-tiers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(212,175,55,0.2);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 2rem;
+    }
+
+    .c-tier {
+      background: rgba(255,255,255,0.9);
+      text-align: center;
+      padding: 1.2rem 0.8rem;
+    }
+
+    .c-range {
+      font-size: 0.75rem;
+      color: var(--color-gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .c-price {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--color-burgundy);
+      line-height: 1;
+    }
+
+    .c-unit {
+      font-size: 0.8rem;
+      color: var(--color-gray);
+      margin-top: 0.2rem;
+    }
+
+    .cocktail-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .cocktail-item {
+      text-align: center;
+    }
+
+    .cocktail-item img,
+    .cocktail-ph {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .cocktail-ph {
+      background: linear-gradient(135deg, var(--color-rose-light, #f3d9df), var(--color-rose, #e8b4bc));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      opacity: 0.7;
+    }
+
+    .cocktail-img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .cocktail-label {
+      font-size: 0.75rem;
+      color: var(--color-dark);
+      line-height: 1.4;
+      font-style: italic;
+    }
+
+    /* ── Macarons & Cookies ──────────────────────── */
+    .petits-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .petit-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+      transition: all 0.4s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .petit-card.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .petit-card:hover {
+      border-color: var(--color-gold);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .petit-photo,
+    .petit-ph {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .petit-ph {
+      background: linear-gradient(135deg, var(--color-rose-light, #f3d9df), var(--color-rose, #e8b4bc));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .petit-ph .ph-icon { font-size: 2.5rem; opacity: 0.6; }
+    .petit-ph .ph-name {
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      color: var(--color-burgundy);
+      opacity: 0.6;
+    }
+
+    .petit-body {
+      padding: 1.2rem 1.4rem;
+    }
+
+    .petit-name {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--color-burgundy);
+      margin: 0 0 0.4rem;
+    }
+
+    .petit-desc {
+      font-size: 0.85rem;
+      color: var(--color-gray);
+      font-style: italic;
+      line-height: 1.5;
+      margin: 0 0 1rem;
+    }
+
+    .petit-prices {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .petit-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px dashed rgba(212,175,55,0.25);
+      font-size: 0.9rem;
+    }
+
+    .petit-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .petit-label { color: var(--color-gray); }
+
+    .petit-val {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-burgundy);
+    }
+
+    /* ── Pièces montées ──────────────────────────── */
+    .montee-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 20px;
+      padding: 2rem 2.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+      transition: all 0.4s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .montee-card.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .montee-card:hover {
+      border-color: var(--color-gold);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .montee-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid rgba(212,175,55,0.2);
+    }
+
+    .tarif-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-rose-light, #f3d9df), var(--color-rose, #e8b4bc));
+      border: 2px solid var(--color-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-burgundy);
+      flex-shrink: 0;
+    }
+
+    .montee-header h2 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--color-burgundy);
+      margin: 0;
+    }
+
+    .montee-prix {
+      display: flex;
+      gap: 3rem;
+      margin: 1rem 0 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .mp-item { text-align: center; }
+
+    .mp-from {
+      font-size: 0.7rem;
+      color: var(--color-gold);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .mp-val {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--color-burgundy);
+      line-height: 1;
+    }
+
+    .mp-unit {
+      font-size: 0.8rem;
+      color: var(--color-gray);
+      margin-top: 0.2rem;
+    }
+
+    .montee-photos {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.8rem;
+      margin-top: 1.5rem;
+    }
+
+    .montee-photos img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 12px;
+      display: block;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .montee-photos img:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+    }
+
+    .montee-ph {
+      background: linear-gradient(135deg, var(--color-rose-light, #f3d9df), var(--color-rose, #e8b4bc));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      opacity: 0.6;
+      height: 320px;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .montee-photos {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .montee-photos img, .montee-ph { height: 220px; }
+    }
+
+    @media (max-width: 500px) {
+      .montee-photos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .montee-photos img, .montee-ph { height: 180px; }
+    }
+
+    .tarif-details {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: rgba(243,217,223,0.3);
+      border-radius: 12px;
+      border-left: 3px solid var(--color-gold);
+    }
+
+    .tarif-details p {
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      color: var(--color-dark);
+      line-height: 1.6;
+    }
+
+    .tarif-details p:first-child { margin-top: 0; }
+    .tarif-details p:last-child { margin-bottom: 0; }
+
+    .tarif-note {
+      font-size: 0.9rem;
+      color: var(--color-gray);
+      font-style: italic;
+      margin-top: 1rem;
+    }
+
+    /* ── Conditions ──────────────────────────────── */
+    .conditions-section {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(212,175,55,0.25);
+      border-radius: 24px;
+      padding: 2rem 2.5rem;
+      margin: 3rem 0;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .conditions-section h2 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--color-burgundy);
+      margin: 0 0 1.5rem;
+      text-align: center;
+    }
+
+    .conditions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .condition-item {
+      display: flex;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .condition-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-rose-light, #f3d9df), var(--color-rose, #e8b4bc));
+      border: 2px solid var(--color-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-burgundy);
+      flex-shrink: 0;
+    }
+
+    .condition-text h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-burgundy);
+      margin: 0 0 0.5rem;
+    }
+
+    .condition-text p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--color-gray);
+      line-height: 1.6;
+    }
+
+    /* ── CTA ─────────────────────────────────────── */
+    .tarifs-cta {
+      text-align: center;
+      margin: 3rem 0 2rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(125,31,49,0.05), rgba(243,217,223,0.2));
+      border-radius: 20px;
+      border: 2px solid var(--color-gold);
+    }
+
+    .tarifs-cta h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--color-burgundy);
+      margin: 0 0 1rem;
+    }
+
+    .tarifs-cta p {
+      margin: 0 0 1.5rem;
+      color: var(--color-gray);
+    }
+
+    /* ── Responsive ──────────────────────────────── */
+    @media (max-width: 768px) {
+      .page-top h1 { font-size: 2.25rem; }
+
+      .produit-card {
+        grid-template-columns: 1fr;
+      }
+
+      .produit-photo,
+      .produit-photo-placeholder {
+        width: 100%;
+        min-height: 200px;
+      }
+
+      .prix-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .prix-montant { font-size: 0.9rem; }
+
+      .cocktail-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .petits-grid { grid-template-columns: 1fr; }
+
+      .montee-photos { grid-template-columns: repeat(3, 1fr); }
+
+      .conditions-grid { grid-template-columns: 1fr; }
+
+      .montee-card,
+      .cocktail-tarifs { padding: 1.5rem; }
+    }
+
+    /* Tartes : 4 colonnes */
+    .prix-grid--4 {
+      grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    @media (max-width: 600px) {
+      .tarifs-page { padding: 0 1rem 3rem; }
+      .page-top { padding: 1.5rem 1rem 0; }
+      .prix-grid { grid-template-columns: repeat(3, 1fr); }
+      .prix-cell:nth-child(4),
+      .prix-cell:nth-child(5) { display: none; }
+      .prix-grid--4 { grid-template-columns: repeat(2, 1fr) !important; }
+      .prix-grid--4 .prix-cell { display: block !important; }
+      .montee-photos { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "GC Signature – Gérald Canet",
+    "description": "Maître Artisan Pâtissier-Chocolatier spécialisé dans les pièces montées, croquembouches et créations sur mesure à l'Île Maurice.",
+    "url": "https://gc-signature.com",
+    "telephone": "+23055020109",
+    "priceRange": "Rs Rs",
+    "servesCuisine": "French Pastry",
+    "hasMap": "https://maps.google.com/?q=GC+Signature+Petit+Raffray+Mauritius",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Île Maurice – Nord de l'île"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Hills Villa, 8 Domaine de la Forêt des Pins",
+      "addressLocality": "Petit Raffray",
+      "addressRegion": "Rivière du Rempart",
+      "addressCountry": "MU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-19.9833",
+      "longitude": "57.5833"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "description": "Sur commande uniquement – délai minimum 48h"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100063628180885",
+      "https://www.instagram.com/gcsignature230"
+    ],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pièces montées sur mesure" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Croquembouche" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gâteaux de mariage" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entremets" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pièces cocktails" } }
+    ]
+  }
+  </script>
+</head>
+
+<body role="application">
+  <!-- Particules dorées décoratives -->
+  <div class="golden-particles" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <div class="page-top fade-in">
+    <div class="btn-row">
+      <a href="../index.html" class="btn-qsj">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M15 8H1M7 14L1 8l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Accueil</span>
+      </a>
+    </div>
+    <h1>Nos Tarifs</h1>
+  </div>
+
+  <div class="tarifs-page">
+
+    <p class="page-intro fade-in-delay">
+      Nos créations sont réalisées sur commande avec des ingrédients de qualité. 
+      Les tarifs sont indicatifs et peuvent varier selon vos souhaits personnalisés.
+    </p>
+
+    <!-- Navigation catégories -->
+    <div class="cat-nav fade-in-delay">
+      <a href="#entremets">Entremets</a>
+      <a href="#tartes">Tartes</a>
+      <a href="#cocktails">Pièces cocktails</a>
+      <a href="#macarons">Macarons &amp; Cookies</a>
+      <a href="#montees">Pièces montées</a>
+    </div>
+
+    <!-- ══════════════ ENTREMETS ══════════════ -->
+    <div id="entremets" class="section-wrap">
+      <span class="section-title">Entremets</span>
+    </div>
+
+    <!-- Le Saint-Honoré au Chocolat -->
+    <div class="produit-card">
+      <img src="../images/saint-honore-chocolat.jpg" alt="Le Saint-Honoré au Chocolat" class="produit-photo">
+      <div class="produit-body">
+        <div class="produit-top">
+          <h3 class="produit-name">Le Saint-Honoré au Chocolat</h3>
+          <p class="produit-desc">Pâte feuilletée maison, pâte à choux, crème pâtissière au chocolat et mousse au chocolat.</p>
+        </div>
+        <div class="prix-grid">
+          <div class="prix-cell"><div class="prix-pers">4 pers.</div><div class="prix-montant">960 Rs</div><div class="prix-taille">⌀ 18 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">6 pers.</div><div class="prix-montant">1 440 Rs</div><div class="prix-taille">⌀ 20 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">8 pers.</div><div class="prix-montant">1 920 Rs</div><div class="prix-taille">⌀ 22 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">10 pers.</div><div class="prix-montant">2 400 Rs</div><div class="prix-taille">⌀ 24 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">12 pers.</div><div class="prix-montant">2 880 Rs</div><div class="prix-taille">⌀ 26 cm</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- La Rose des Sables -->
+    <div class="produit-card">
+      <img src="../images/rose-des-sablest.jpg" alt="La Rose des Sables" class="produit-photo">
+      <div class="produit-body">
+        <div class="produit-top">
+          <h3 class="produit-name">La Rose des Sables</h3>
+          <p class="produit-desc">Biscuit dacquois aux amandes, croustillant praliné noisettes maison et mousse au chocolat intense.</p>
+        </div>
+        <div class="prix-grid">
+          <div class="prix-cell"><div class="prix-pers">4 pers.</div><div class="prix-montant">960 Rs</div><div class="prix-taille">⌀ 18 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">6 pers.</div><div class="prix-montant">1 440 Rs</div><div class="prix-taille">⌀ 20 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">8 pers.</div><div class="prix-montant">1 920 Rs</div><div class="prix-taille">⌀ 22 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">10 pers.</div><div class="prix-montant">2 400 Rs</div><div class="prix-taille">⌀ 24 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">12 pers.</div><div class="prix-montant">2 880 Rs</div><div class="prix-taille">⌀ 26 cm</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- L'Anaïs Framboise -->
+    <div class="produit-card">
+      <img src="../images/anais-framboise.jpg" alt="L'Anaïs Framboise" class="produit-photo">
+      <div class="produit-body">
+        <div class="produit-top">
+          <h3 class="produit-name">L'Anaïs Framboise</h3>
+          <p class="produit-desc">Biscuit macaron amandes, crème légère et insert de framboises.</p>
+        </div>
+        <div class="prix-grid">
+          <div class="prix-cell"><div class="prix-pers">4 pers.</div><div class="prix-montant">960 Rs</div><div class="prix-taille">⌀ 18 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">6 pers.</div><div class="prix-montant">1 440 Rs</div><div class="prix-taille">⌀ 20 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">8 pers.</div><div class="prix-montant">1 920 Rs</div><div class="prix-taille">⌀ 22 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">10 pers.</div><div class="prix-montant">2 400 Rs</div><div class="prix-taille">⌀ 24 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">12 pers.</div><div class="prix-montant">2 880 Rs</div><div class="prix-taille">⌀ 26 cm</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Le Paris Brest -->
+    <div class="produit-card">
+      <img src="../images/paris-brestt.jpg" alt="Le Paris Brest à ma façon" class="produit-photo">
+      <div class="produit-body">
+        <div class="produit-top">
+          <h3 class="produit-name">Le Paris Brest à ma façon</h3>
+          <p class="produit-desc">Pâte à choux, crème diplomate au praliné noisettes maison, Chantilly.</p>
+        </div>
+        <div class="prix-grid">
+          <div class="prix-cell"><div class="prix-pers">4 pers.</div><div class="prix-montant">960 Rs</div><div class="prix-taille">⌀ 18 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">6 pers.</div><div class="prix-montant">1 440 Rs</div><div class="prix-taille">⌀ 20 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">8 pers.</div><div class="prix-montant">1 920 Rs</div><div class="prix-taille">⌀ 22 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">10 pers.</div><div class="prix-montant">2 400 Rs</div><div class="prix-taille">⌀ 24 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">12 pers.</div><div class="prix-montant">2 880 Rs</div><div class="prix-taille">⌀ 26 cm</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Le Mauritius -->
+    <div class="produit-card">
+      <img src="../images/mauritiust.jpg" alt="Le Mauritius" class="produit-photo">
+      <div class="produit-body">
+        <div class="produit-top">
+          <h3 class="produit-name">Le Mauritius</h3>
+          <p class="produit-desc">Biscuit macaron amandes, crème diplomate à la vanille, insert de coulis aux fruits exotiques (mangue, ananas, passion).</p>
+        </div>
+        <div class="prix-grid">
+          <div class="prix-cell"><div class="prix-pers">4 pers.</div><div class="prix-montant">960 Rs</div><div class="prix-taille">⌀ 18 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">6 pers.</div><div class="prix-montant">1 440 Rs</div><div class="prix-taille">⌀ 20 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">8 pers.</div><div class="prix-montant">1 920 Rs</div><div class="prix-taille">⌀ 22 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">10 pers.</div><div class="prix-montant">2 400 Rs</div><div class="prix-taille">⌀ 24 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">12 pers.</div><div class="prix-montant">2 880 Rs</div><div class="prix-taille">⌀ 26 cm</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Le Mille Feuilles -->
+    <div class="produit-card">
+      <img src="../images/mille-feuilles.jpg" alt="Le Mille Feuilles" class="produit-photo">
+      <div class="produit-body">
+        <div class="produit-top">
+          <h3 class="produit-name">Le Mille Feuilles</h3>
+          <p class="produit-desc">Feuilletage fait maison, crème mousseline à la vanille ou au Rhum.</p>
+        </div>
+        <div class="prix-grid">
+          <div class="prix-cell"><div class="prix-pers">4 pers.</div><div class="prix-montant">960 Rs</div><div class="prix-taille">12/16 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">6 pers.</div><div class="prix-montant">1 440 Rs</div><div class="prix-taille">15/18 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">8 pers.</div><div class="prix-montant">1 920 Rs</div><div class="prix-taille">18/20 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">10 pers.</div><div class="prix-montant">2 400 Rs</div><div class="prix-taille">20/24 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">12 pers.</div><div class="prix-montant">2 880 Rs</div><div class="prix-taille">20/27 cm</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════ TARTES ══════════════ -->
+    <div id="tartes" class="section-wrap">
+      <span class="section-title">Tartes</span>
+    </div>
+
+    <!-- Tarte aux Citrons -->
+    <div class="produit-card">
+      <img src="../images/tarte-citrons.jpg" alt="La Tarte aux Citrons" class="produit-photo">
+      <div class="produit-body">
+        <div class="produit-top">
+          <h3 class="produit-name">La Tarte aux Citrons</h3>
+          <p class="produit-desc">Pâte sablée maison, crème citron et meringue italienne.</p>
+        </div>
+        <div class="prix-grid prix-grid--4">
+          <div class="prix-cell"><div class="prix-pers">4 pers.</div><div class="prix-montant">960 Rs</div><div class="prix-taille">⌀ 18 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">6 pers.</div><div class="prix-montant">1 440 Rs</div><div class="prix-taille">⌀ 22 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">8 pers.</div><div class="prix-montant">1 920 Rs</div><div class="prix-taille">⌀ 24 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">10 pers.</div><div class="prix-montant">2 400 Rs</div><div class="prix-taille">⌀ 26 cm</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarte aux Fruits -->
+    <div class="produit-card">
+      <img src="../images/tarte-fruitst.jpg" alt="La Tarte aux Fruits" class="produit-photo">
+      <div class="produit-body">
+        <div class="produit-top">
+          <h3 class="produit-name">La Tarte aux Fruits</h3>
+          <p class="produit-desc">Pâte sablée maison, crème d'amandes, crème mousseline à la vanille, mélange de fruits frais.</p>
+        </div>
+        <div class="prix-grid prix-grid--4">
+          <div class="prix-cell"><div class="prix-pers">4 pers.</div><div class="prix-montant">960 Rs</div><div class="prix-taille">⌀ 18 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">6 pers.</div><div class="prix-montant">1 440 Rs</div><div class="prix-taille">⌀ 22 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">8 pers.</div><div class="prix-montant">1 920 Rs</div><div class="prix-taille">⌀ 24 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">10 pers.</div><div class="prix-montant">2 400 Rs</div><div class="prix-taille">⌀ 26 cm</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarte Fruits Rouges -->
+    <div class="produit-card">
+      <img src="../images/tarte-fraises.jpg" alt="La Tarte Fruits Rouges" class="produit-photo">
+      <div class="produit-body">
+        <div class="produit-top">
+          <h3 class="produit-name">La Tarte Fruits Rouges <small style="font-size:0.75rem;font-weight:400;color:var(--color-gray)">(selon disponibilité)</small></h3>
+          <p class="produit-desc">Pâte sablée maison, crème d'amandes, crème mousseline à la vanille, fraises et fruits rouges.</p>
+        </div>
+        <div class="prix-grid prix-grid--4">
+          <div class="prix-cell"><div class="prix-pers">4 pers.</div><div class="prix-montant">1 120 Rs</div><div class="prix-taille">⌀ 18 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">6 pers.</div><div class="prix-montant">1 680 Rs</div><div class="prix-taille">⌀ 22 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">8 pers.</div><div class="prix-montant">2 240 Rs</div><div class="prix-taille">⌀ 24 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">10 pers.</div><div class="prix-montant">2 800 Rs</div><div class="prix-taille">⌀ 26 cm</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarte Tatin -->
+    <div class="produit-card">
+      <img src="../images/tarte-tatin.jpg" alt="La Tarte Tatin" class="produit-photo">
+      <div class="produit-body">
+        <div class="produit-top">
+          <h3 class="produit-name">La Tarte Tatin</h3>
+          <p class="produit-desc">Pâte feuilletée maison, caramel beurre salé, quartiers de pommes, cannelle.</p>
+        </div>
+        <div class="prix-grid prix-grid--4">
+          <div class="prix-cell"><div class="prix-pers">4 pers.</div><div class="prix-montant">960 Rs</div><div class="prix-taille">⌀ 18 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">6 pers.</div><div class="prix-montant">1 440 Rs</div><div class="prix-taille">⌀ 22 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">8 pers.</div><div class="prix-montant">1 920 Rs</div><div class="prix-taille">⌀ 24 cm</div></div>
+          <div class="prix-cell"><div class="prix-pers">10 pers.</div><div class="prix-montant">2 400 Rs</div><div class="prix-taille">⌀ 26 cm</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════ COCKTAILS ══════════════ -->
+    <div id="cocktails" class="section-wrap">
+      <span class="section-title">Pièces Cocktails</span>
+    </div>
+
+    <div class="cocktail-tarifs">
+      <div class="cocktail-tiers">
+        <div class="c-tier">
+          <div class="c-range">30 – 80 pièces</div>
+          <div class="c-price">70 Rs</div>
+          <div class="c-unit">par pièce</div>
+        </div>
+        <div class="c-tier">
+          <div class="c-range">81 – 150 pièces</div>
+          <div class="c-price">60 Rs</div>
+          <div class="c-unit">par pièce</div>
+        </div>
+        <div class="c-tier">
+          <div class="c-range">151 pièces et +</div>
+          <div class="c-price">50 Rs</div>
+          <div class="c-unit">par pièce</div>
+        </div>
+      </div>
+
+      <div class="cocktail-grid">
+        <div class="cocktail-item">
+          <img src="../images/cocktail-eclair-chocolat.jpg" alt="Éclair chocolat" class="cocktail-img">
+          <div class="cocktail-label">Éclair chocolat 72%</div>
+        </div>
+        <div class="cocktail-item">
+          <img src="../images/cocktail-tartelettes-fruits.jpg" alt="Tartelettes aux fruits" class="cocktail-img">
+          <div class="cocktail-label">Tartelettes aux fruits</div>
+        </div>
+        <div class="cocktail-item">
+          <img src="../images/cocktail-choux-vanille-ananas.jpg" alt="Choux craquelin vanille ananas chantilly" class="cocktail-img">
+          <div class="cocktail-label">Choux craquelin, crème vanille, ananas &amp; chantilly</div>
+        </div>
+        <div class="cocktail-item">
+          <img src="../images/cocktail-tartelettes-royal-chocolat.jpg" alt="Tartelettes royal chocolat" class="cocktail-img">
+          <div class="cocktail-label">Tartelettes royal chocolat</div>
+        </div>
+        <div class="cocktail-item">
+          <img src="../images/cocktail-choux-caramel.jpg" alt="Choux Caramel" class="cocktail-img">
+          <div class="cocktail-label">Choux Caramel</div>
+        </div>
+        <div class="cocktail-item">
+          <img src="../images/cocktail-choux-vanille-framboise.jpg" alt="Choux vanille framboise" class="cocktail-img">
+          <div class="cocktail-label">Choux vanille/framboise craquelin</div>
+        </div>
+        <div class="cocktail-item">
+          <img src="../images/cocktail-figues.jpg" alt="Figues choux pâte d'amandes" class="cocktail-img">
+          <div class="cocktail-label">Figues: choux &amp; pâte d'amandes maison</div>
+        </div>
+        <div class="cocktail-item">
+          <img src="../images/cocktail-tartelettes-citron.jpg" alt="Tartelettes citron" class="cocktail-img">
+          <div class="cocktail-label">Tartelettes citron</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════ MACARONS & COOKIES ══════════════ -->
+    <div id="macarons" class="section-wrap">
+      <span class="section-title">Macarons &amp; Cookies</span>
+    </div>
+
+    <div class="petits-grid">
+      <div class="petit-card">
+        <img src="../images/macarons.jpg" alt="Macarons maison" class="petit-photo">
+        <div class="petit-body">
+          <h3 class="petit-name">Macarons Maison</h3>
+          <p class="petit-desc">Passion, framboise, vanille ou chocolat — faits maison avec soin.</p>
+          <div class="petit-prices">
+            <div class="petit-row">
+              <span class="petit-label">À l'unité</span>
+              <span class="petit-val">60 Rs</span>
+            </div>
+            <div class="petit-row">
+              <span class="petit-label">Coffret 4 macarons</span>
+              <span class="petit-val">240 Rs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="petit-card">
+        <img src="../images/cookies.jpg" alt="Cookies maison" class="petit-photo">
+        <div class="petit-body">
+          <h3 class="petit-name">Cookies Maison</h3>
+          <p class="petit-desc">Ganache chocolat fondant ou cœur coulant au caramel beurre salé.</p>
+          <div class="petit-prices">
+            <div class="petit-row">
+              <span class="petit-label">Boîte de 6 cookies</span>
+              <span class="petit-val">480 Rs</span>
+            </div>
+            <div class="petit-row">
+              <span class="petit-label">Boîte de 8 cookies</span>
+              <span class="petit-val">600 Rs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════ PIÈCES MONTÉES ══════════════ -->
+    <div id="montees" class="section-wrap">
+      <span class="section-title">Pièces Montées</span>
+    </div>
+
+    <div class="montee-card">
+      <div class="montee-header">
+        <div class="tarif-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h2>Pour vos grandes occasions</h2>
+      </div>
+
+      <div class="montee-prix">
+        <div class="mp-item">
+          <div class="mp-from">À partir de</div>
+          <div class="mp-val">100 Rs</div>
+          <div class="mp-unit">le choux</div>
+        </div>
+        <div class="mp-item">
+          <div class="mp-from">Ou</div>
+          <div class="mp-val">300 Rs</div>
+          <div class="mp-unit">par personne</div>
+        </div>
+      </div>
+
+      <div class="tarif-details">
+        <p>Pour toutes vos grandes occasions — baptêmes, mariages, anniversaires...</p>
+        <p><strong>Conseil :</strong> 3 choux par personne recommandés.</p>
+        <p><strong>Idéal pour :</strong> Mariages, grandes célébrations, événements prestigieux.</p>
+      </div>
+
+      <p class="tarif-note">💡 Nous consulter pour tout devis personnalisé selon vos envies et votre budget.</p>
+
+      <div class="montee-photos">
+        <img src="../images/montee-1.jpg" alt="Pièce montée" class="montee-ph">
+        <img src="../images/montee-2.jpg" alt="Pièce montée" class="montee-ph">
+        <img src="../images/montee-3.jpg" alt="Pièce montée" class="montee-ph">
+        <img src="../images/montee-4.jpg" alt="Pièce montée" class="montee-ph">
+        <img src="../images/montee-5.jpg" alt="Pièce montée" class="montee-ph">
+      </div>
+    </div>
+
+    <!-- ══════════════ CONDITIONS ══════════════ -->
+    <div class="conditions-section">
+      <h2>Informations Pratiques</h2>
+      <div class="conditions-grid">
+
+        <div class="condition-item">
+          <div class="condition-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="condition-text">
+            <h3>Délai de commande</h3>
+            <p>Minimum 48 heures à l'avance pour toute commande.</p>
+          </div>
+        </div>
+
+        <div class="condition-item">
+          <div class="condition-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <rect x="9" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M16 11v-2a2 2 0 0 0-2-2h0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="condition-text">
+            <h3>Retrait &amp; Livraison</h3>
+            <p>Retrait à l'atelier à Petit Raffray. Livraison gratuite dans le Nord (&lt; 15 km). Au-delà, nous consulter. Minimum de commande : 1 000 Rs.</p>
+          </div>
+        </div>
+
+        <div class="condition-item">
+          <div class="condition-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M2 10h20" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="condition-text">
+            <h3>Modalités</h3>
+            <p>Acompte de 30% à la commande. Solde à la livraison ou au retrait.</p>
+          </div>
+        </div>
+
+        <div class="condition-item">
+          <div class="condition-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="condition-text">
+            <h3>Devis sur mesure</h3>
+            <p>Chaque création peut être personnalisée. Contactez-nous pour un devis adapté.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA Contact -->
+    <div class="tarifs-cta">
+      <h3>Une question sur nos tarifs ?</h3>
+      <p>Contactez-nous pour un devis personnalisé ou pour discuter de votre projet.</p>
+      <a href="tel:+23055020109" class="btn-qsj">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>+230 5502-0109</span>
+      </a>
+    </div>
+
+    <!-- Retour Accueil -->
+    <div class="page-top" style="margin-top: 2rem; margin-bottom: 2rem;">
+      <div class="cta-qsj cta-qsj--global">
+        <span class="cta-line"></span>
+        <a href="../index.html" class="btn-qsj">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M15 8H1M7 14L1 8l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Retour à l'accueil</span>
+        </a>
+        <span class="cta-line"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Gérald Canet – Maître Artisan Pâtissier-Chocolatier – Île Maurice</p>
+      <p class="footer-legal">Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <!-- Bouton WhatsApp Flottant -->
+  <a href="https://wa.me/23055020109?text=Bonjour,%20je%20souhaite%20obtenir%20un%20devis%20pour%20une%20création%20pâtissière." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     aria-label="Contactez-nous sur WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor">
+      <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-.646-7.07-1.87l-.507-.292-4.713 1.262 1.262-4.669-.292-.508c-1.207-2.1-1.847-4.507-1.847-6.924 0-7.435 6.050-13.485 13.485-13.485s13.485 6.050 13.485 13.485c0 7.435-6.050 13.485-13.485 13.485zM21.960 18.735c-.347-.174-2.051-1.012-2.369-1.128-.318-.116-.549-.174-.780.174s-.897 1.128-1.099 1.360c-.202.231-.405.260-.751.087-.347-.174-1.464-.540-2.788-1.721-1.031-.919-1.727-2.054-1.929-2.401-.202-.347-.022-.535.152-.708.156-.155.347-.405.520-.607.174-.202.231-.347.347-.578.116-.231.058-.433-.029-.607s-.780-1.88-1.070-2.574c-.282-.676-.567-.584-.780-.595-.202-.010-.433-.012-.665-.012s-.607.087-.925.433c-.318.347-1.213 1.186-1.213 2.892s1.242 3.355 1.416 3.587c.174.231 2.445 3.733 5.922 5.235.827.357 1.473.571 1.977.731.831.263 1.586.226 2.183.137.666-.099 2.051-.839 2.340-1.649.289-.810.289-1.504.202-1.649s-.318-.231-.665-.405z"/>
+    </svg>
+    <span class="whatsapp-text">Devis WhatsApp</span>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('revealed');
+            }, index * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.produit-card, .cocktail-tarifs, .petit-card, .montee-card').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>

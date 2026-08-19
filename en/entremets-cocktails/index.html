@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Entremets & Cocktail Bites – Gérald Canet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Refined entremets and cocktail bites for birthdays, buffets and receptions in Mauritius.">
+  <meta name="robots" content="noarchive">
+  <meta name="googlebot" content="noarchive">
+  <link rel="alternate" hreflang="fr" href="https://gc-signature.com/entremets-cocktails/">
+  <link rel="alternate" hreflang="en" href="https://gc-signature.com/en/entremets-cocktails/">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --section-gap: 3rem; }
+    .pm-page { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+    .page-top { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 0; text-align: center; }
+    .pm-top { text-align: center; padding: 1rem 0 2rem; animation: fadeInUp 0.8s ease-out forwards; }
+    .pm-top h1 { font-family: var(--font-display); font-size: 2.75rem; font-weight: 600; color: var(--color-burgundy); margin: 1.5rem 0 1rem; position: relative; display: inline-block; }
+    .pm-top h1::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 100px; height: 3px; background: linear-gradient(90deg, transparent, var(--color-gold), transparent); }
+    .pm-top p { max-width: 860px; margin: 1.5rem auto; font-family: var(--font-display); font-size: 1.2rem; font-style: italic; font-weight: 300; color: var(--color-burgundy); line-height: 1.8; opacity: 0.92; }
+    .pm-textblock { background: rgba(255,255,255,0.85); backdrop-filter: blur(10px); border: 1px solid rgba(212,175,55,0.25); border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.5) inset; padding: 2rem 2.5rem; margin: var(--section-gap) 0; opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+    .pm-textblock.revealed { opacity: 1; transform: translateY(0); }
+    .pm-textblock:hover { border-color: var(--color-gold); box-shadow: 0 15px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(212,175,55,0.3); }
+    .pm-textblock h2 { font-family: var(--font-display); font-size: 1.75rem; font-weight: 600; color: var(--color-burgundy); margin: 0 0 1.5rem; position: relative; padding-bottom: 0.75rem; }
+    .pm-textblock h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 60px; height: 3px; background: linear-gradient(90deg, var(--color-gold), transparent); }
+    .pm-textblock p { font-size: 1rem; line-height: 1.8; color: var(--color-dark); margin: 0 0 1rem; opacity: 0.92; }
+    .pm-textblock p:last-child { margin-bottom: 0; }
+    .pm-strong { font-weight: 600; color: var(--color-burgundy); }
+    .pm-nextchapter { margin-top: calc(var(--section-gap) * 1.5); }
+    .pm-photos { display: flex; flex-direction: column; gap: 2.5rem; margin: var(--section-gap) 0; }
+    .pm-photo { margin: 0; opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+    .pm-photo.revealed { opacity: 1; transform: translateY(0); }
+    .pm-photo img { width: 75%; max-width: 800px; height: auto; display: block; margin: 0 auto; border-radius: 20px; border: 2px solid var(--color-gold); box-shadow: 0 15px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(212,175,55,0.2); transition: all 0.4s ease; }
+    .pm-photo:hover img { transform: translateY(-8px) scale(1.02); box-shadow: 0 25px 60px rgba(0,0,0,0.18), 0 0 0 3px var(--color-gold); }
+    .pm-caption { padding: 1rem 1.5rem 0; font-size: 0.95rem; font-style: italic; color: var(--color-gray); line-height: 1.6; text-align: center; max-width: 600px; margin: 0 auto; }
+    .section-icon { display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; margin: 0 auto 1.5rem; border-radius: 50%; background: linear-gradient(135deg, var(--color-rose-light), var(--color-rose)); border: 2px solid var(--color-gold); color: var(--color-burgundy); }
+    .pm-textblock-with-icon { text-align: center; }
+    .section-divider { display: flex; align-items: center; gap: 1.5rem; margin: calc(var(--section-gap) * 1.2) 0; opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+    .section-divider.revealed { opacity: 1; transform: translateY(0); }
+    .section-divider::before, .section-divider::after { content: ''; flex: 1; height: 2px; background: linear-gradient(90deg, transparent, var(--color-gold) 50%, transparent); opacity: 0.6; }
+    .section-divider-icon { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--color-burgundy), var(--color-burgundy-dark)); border: 2px solid var(--color-gold); display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 12px rgba(125,31,49,0.3); }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+
+    /* ── Language switcher ── */
+    .lang-switcher { position: fixed; top: 16px; right: 20px; z-index: 10000; display: flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); border: 1px solid rgba(212,175,55,0.4); border-radius: 50px; padding: 5px 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .lang-btn { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 50px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; color: #7d1f31; transition: all 0.25s ease; border: none; background: transparent; cursor: pointer; }
+    .lang-btn:hover { background: rgba(212,175,55,0.15); }
+    .lang-btn.active { background: linear-gradient(135deg, #7d1f31, #5e1423); color: white; }
+    .lang-btn .flag { font-size: 1rem; line-height: 1; }
+    .lang-sep { width: 1px; height: 14px; background: rgba(212,175,55,0.4); }
+
+    @media (max-width: 900px) { :root { --section-gap: 2rem; } .pm-photo img { width: 90%; } .pm-textblock { padding: 1.5rem 1.75rem; } }
+    @media (max-width: 768px) { .pm-top h1 { font-size: 2.25rem; } .pm-top p { font-size: 1.05rem; } .pm-textblock h2 { font-size: 1.5rem; } }
+    @media (max-width: 600px) { .pm-page { padding: 0 1rem 3rem; } .page-top { padding: 1.5rem 1rem 0; } .pm-top h1 { font-size: 2rem; } .pm-photo img { width: 95%; border-radius: 16px; } .pm-caption { font-size: 0.9rem; padding: 0.75rem 1rem 0; } .section-icon { width: 50px; height: 50px; margin-bottom: 1rem; } .section-divider { gap: 1rem; } .section-divider-icon { width: 35px; height: 35px; } .lang-switcher { top: 10px; right: 10px; padding: 4px 8px; } .lang-btn { font-size: 0.72rem; padding: 3px 8px; } }
+  </style>
+</head>
+
+<body role="application">
+
+  <!-- Language switcher -->
+  <div class="lang-switcher">
+    <a href="../../entremets-cocktails/index.html" class="lang-btn"><span class="flag">🇫🇷</span> FR</a>
+    <div class="lang-sep"></div>
+    <a href="./index.html" class="lang-btn active"><span class="flag">🇬🇧</span> EN</a>
+  </div>
+
+  <div class="golden-particles" aria-hidden="true"></div>
+
+  <div class="page-top fade-in">
+    <a href="../../en/index.html" class="btn-qsj">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M15 8H1M7 14L1 8l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Home</span>
+    </a>
+  </div>
+
+  <div class="pm-page">
+
+    <div class="pm-top">
+      <h1>Entremets & Cocktail Bites</h1>
+      <p>Indulgent creations designed to be shared — a balance of elegance, textures and emotions… from the very first glance to the very last bite.</p>
+    </div>
+
+    <div class="pm-textblock pm-textblock-with-icon">
+      <div class="section-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </div>
+      <h2>Bespoke indulgence</h2>
+      <p>Entremets, petit fours and cocktail bites tailored to your event.</p>
+      <p class="pm-strong">Our goal: to surprise and delight.</p>
+    </div>
+
+    <!-- ══════════ ENTREMETS ══════════ -->
+    <div class="pm-textblock pm-textblock-with-icon">
+      <div class="section-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h2>Entremets & Number Cakes</h2>
+      <p>For your birthdays and celebrations: unique creations combining aesthetics and indulgence.</p>
+      <p class="pm-strong">Our specialities:</p>
+    </div>
+
+    <div class="pm-photos">
+
+      <div class="pm-photo">
+        <img src="../../images/saint-honore-chocolat.jpg" alt="Chocolate Saint-Honoré" loading="lazy">
+        <div class="pm-caption">
+          <strong>Chocolate Saint-Honoré</strong> – A great French pastry classic, revisited with passion. On a golden, flaky homemade puff pastry rests a crown of choux buns filled with an intense dark chocolate pastry cream, all crowned by an airy and generous chocolate mousse. A creation that balances crunch, melt-in-the-mouth texture and deep chocolate richness — tradition and indulgence in perfect harmony.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/number-cake.jpg" alt="Personalised Number Cake" loading="lazy">
+        <div class="pm-caption">
+          <strong>Number Cake</strong> – A spectacular cake crafted in the shape of the number of your choice. Elegant, fully personalised and guaranteed to make a lasting impression at any birthday celebration.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/rose-des-sablest.jpg" alt="La Rose des Sables" loading="lazy">
+        <div class="pm-caption">
+          <strong>La Rose des Sables</strong> – A soft almond biscuit with a crunchy homemade hazelnut praline centre, enrobed in a rich and velvety dark chocolate mousse. A perfect balance of softness and intensity.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/anais-framboise.jpg" alt="L'Anaïs" loading="lazy">
+        <div class="pm-caption">
+          <strong>L'Anaïs</strong> – A delicate almond macaron biscuit paired with a light, airy cream and fresh, tangy raspberries. Freshness and refinement in a subtle, indulgent combination.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/mauritiust.jpg" alt="La Mauritius" loading="lazy">
+        <div class="pm-caption">
+          <strong>La Mauritius</strong> – A soft almond macaron biscuit, smooth Bourbon vanilla diplomat cream, with a tropical fruit coulis insert (mango, passion fruit, pineapple). A sun-drenched escape in every slice.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/paris-brestt.jpg" alt="Paris-Brest revisited" loading="lazy">
+        <div class="pm-caption">
+          <strong>Paris-Brest, My Way</strong> – Golden, crisp choux pastry filled with a generous diplomat cream blended with homemade toasted hazelnut praline, finished with an airy whipped cream. A classic revisited with pure indulgence.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/mille-feuilles.jpg" alt="Classic Mille-Feuille" loading="lazy">
+        <div class="pm-caption">
+          <strong>Classic Mille-Feuille</strong> – Golden, flaky homemade puff pastry layered with a silky pastry cream delicately flavoured with local rum. The timeless elegance of traditional French patisserie.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/tarte-citrons.jpg" alt="Lemon Meringue Tart" loading="lazy">
+        <div class="pm-caption">
+          <strong>Lemon Tart</strong> – A fine, melt-in-the-mouth shortcrust pastry base with a smooth, tangy lemon and lime cream, crowned with a lightly toasted Italian meringue. Zesty, fresh and irresistible.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/tarte-fruitst.jpg" alt="Fresh Fruit Tart" loading="lazy">
+        <div class="pm-caption">
+          <strong>Fruit Tart</strong> – A buttery shortcrust pastry, soft almond cream, Bourbon vanilla mousseline cream, generously topped with a colourful assortment of fresh seasonal fruits. Vibrant, fresh and generous.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/tarte-fraises.jpg" alt="Strawberry and Red Fruit Tart" loading="lazy">
+        <div class="pm-caption">
+          <strong>Strawberry & Red Fruit Tart</strong> – A golden, perfectly crisp shortcrust pastry base, layered with a soft almond cream and a fragrant vanilla mousseline. Crowned with ripe, juicy strawberries and carefully selected red fruits — generous, fresh and elegant in every bite.
+        </div>
+      </div>
+
+      <!-- ✨ Tarte Tatin -->
+      <div class="pm-photo">
+        <img src="../../images/tarte-tatin.jpg" alt="Tarte Tatin" loading="lazy">
+        <div class="pm-caption">
+          <strong>Tarte Tatin</strong> – Crafted in the purest respect of tradition, this upside-down tart begins with a golden, flaky homemade puff pastry, generously topped with a carefully selected blend of apples — meltingly soft Golden and slightly tart Granny Smith — caramelised in an irresistibly indulgent salted butter caramel, lifted with a delicate touch of cinnamon. Warmth, depth and authenticity in every bite.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="section-divider">
+      <div class="section-divider-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+
+    <!-- ══════════ COCKTAIL BITES ══════════ -->
+    <div class="pm-textblock pm-textblock-with-icon pm-nextchapter">
+      <div class="section-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M9 2v6h6V2M3 8h18M5 8l1.5 13a1 1 0 0 0 1 1h9a1 1 0 0 0 1-1L19 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h2>Cocktail bites & gourmet buffets</h2>
+      <p>Designed for your buffets and receptions: elegance, practicality and indulgence.</p>
+      <p class="pm-strong">A selection of our creations:</p>
+    </div>
+
+    <div class="pm-photos">
+
+      <div class="pm-photo">
+        <img src="../../images/cocktail-1.jpg" alt="Assortment of sweet bites" loading="lazy">
+        <div class="pm-caption">Assortment: finesse, variety and harmony.</div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/cocktail-eclair-chocolat.jpg" alt="Chocolate Éclair" loading="lazy">
+        <div class="pm-caption">
+          <strong>Chocolate Éclair</strong> – Golden, crisp choux pastry generously filled with a silky dark chocolate pastry cream, finished with a glossy glaze. A timeless and refined classic.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/cocktail-choux-vanille-framboise.jpg" alt="Vanilla mousseline cream, raspberry heart" loading="lazy">
+        <div class="pm-caption">
+          <strong>Vanilla Mousseline Cream, Raspberry Heart</strong> – A light choux bun filled with a delicate Bourbon vanilla mousseline cream, revealing a tangy fresh raspberry coulis at its centre. Elegant and perfectly balanced.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/cocktail-choux-caramel.jpg" alt="Caramel choux, orange mousseline cream" loading="lazy">
+        <div class="pm-caption">
+          <strong>Caramel Choux, Orange Mousseline Cream</strong> – A golden caramel craquelin choux filled with a mousseline cream delicately flavoured with candied orange zest. A wonderful pairing of caramel sweetness and citrus freshness.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/cocktail-choux-vanille-ananas.jpg" alt="Chantilly and chestnut cream choux" loading="lazy">
+        <div class="pm-caption">
+          <strong>Mauritius Choux, choux pastry topped with a crisp craquelin, filled with vanilla pastry cream, fresh pineapple, and light, delicate Chantilly cream—an exotic creation capturing the flavors of Mauritius...
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/cocktail-tartelettes-royal-chocolat.jpg" alt="Royal chocolate tarts" loading="lazy">
+        <div class="pm-caption">
+          <strong>Royal Chocolate Tarts</strong> – A crunchy homemade hazelnut praline base topped with an intense, velvety dark chocolate mousse. Texture, crunch and melt-in-the-mouth richness for true chocolate lovers.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/cocktail-tartelettes-fruits.jpg" alt="Fresh fruit tartlets" loading="lazy">
+        <div class="pm-caption">
+          <strong>Fresh Fruit Tartlets</strong> – Fine, crisp shortcrust pastry shells filled with a Bourbon vanilla mousseline cream and crowned with a colourful assortment of fresh seasonal fruits. Fresh, indulgent and elegant.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/cocktail-figues.jpg" alt="Figues – choux with almond paste" loading="lazy">
+        <div class="pm-caption">
+          <strong>Figues</strong> – A light, golden choux bun filled with a silky vanilla pastry cream, concealing at its heart a medallion of homemade almond paste with subtle, aromatic notes. The delicacy of the fig reimagined as an elegant and surprising bite — soft, sweet and full of character.
+        </div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/cocktail-tartelettes-citron.jpg" alt="Lemon meringue tartlets" loading="lazy">
+        <div class="pm-caption">
+          <strong>Lemon Meringue Tartlets</strong> – A fine, crisp shortcrust pastry shell filled with a bright, tangy lemon cream with clean, vivid citrus notes. Crowned with a pearl-white Italian meringue, lightly caramelised with a blowtorch, it adds a gentle sweetness and roundness in perfect counterpoint. Freshness, elegance and balance in a single bite.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Back button -->
+    <div class="page-top" style="margin-top: 3rem;">
+      <div class="cta-qsj cta-qsj--global">
+        <span class="cta-line"></span>
+        <a href="../../en/index.html" class="btn-qsj">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M15 8H1M7 14L1 8l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Back to home</span>
+        </a>
+        <span class="cta-line"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <a href="https://wa.me/23055020109?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20a%20pastry%20creation." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-.646-7.07-1.87l-.507-.292-4.713 1.262 1.262-4.669-.292-.508c-1.207-2.1-1.847-4.507-1.847-6.924 0-7.435 6.050-13.485 13.485-13.485s13.485 6.050 13.485 13.485c0 7.435-6.050 13.485-13.485 13.485zM21.960 18.735c-.347-.174-2.051-1.012-2.369-1.128-.318-.116-.549-.174-.780.174s-.897 1.128-1.099 1.360c-.202.231-.405.260-.751.087-.347-.174-1.464-.540-2.788-1.721-1.031-.919-1.727-2.054-1.929-2.401-.202-.347-.022-.535.152-.708.156-.155.347-.405.520-.607.174-.202.231-.347.347-.578.116-.231.058-.433-.029-.607s-.780-1.88-1.070-2.574c-.282-.676-.567-.584-.780-.595-.202-.010-.433-.012-.665-.012s-.607.087-.925.433c-.318.347-1.213 1.186-1.213 2.892s1.242 3.355 1.416 3.587c.174.231 2.445 3.733 5.922 5.235.827.357 1.473.571 1.977.731.831.263 1.586.226 2.183.137.666-.099 2.051-.839 2.340-1.649.289-.810.289-1.504.202-1.649s-.318-.231-.665-.405z"/></svg>
+    <span class="whatsapp-text">WhatsApp Quote</span>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => { entry.target.classList.add('revealed'); }, index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+      document.querySelectorAll('.pm-textblock, .pm-photo, .section-divider').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
