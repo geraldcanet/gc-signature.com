@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Cakes & Croquembouche in Mauritius – Gérald Canet | GC Signature</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="wedding cake Mauritius, croquembouche Mauritius, bespoke wedding cake Grand Baie, celebration cake Mauritius, pastry chef Mauritius, Gérald Canet pastry">
+  <meta name="description" content="Bespoke wedding cakes and croquembouche for weddings, birthdays and events in Mauritius. Handcrafted by Gérald Canet, Master Pastry Chef in Grand Baie. Request a personalised quote.">
+  <meta name="robots" content="noarchive">
+  <meta name="googlebot" content="noarchive">
+  <link rel="alternate" hreflang="fr" href="https://gc-signature.com/pieces-montees/">
+  <link rel="alternate" hreflang="en" href="https://gc-signature.com/en/pieces-montees/">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --section-gap: 3rem; }
+
+    .pm-page { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+    .page-top { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 0; text-align: center; }
+
+    .pm-top { text-align: center; padding: 1rem 0 2rem; animation: fadeInUp 0.8s ease-out forwards; }
+
+    .pm-top h1 { font-family: var(--font-display); font-size: 2.75rem; font-weight: 600; color: var(--color-burgundy); margin: 1.5rem 0 1rem; position: relative; display: inline-block; }
+
+    .pm-top h1::after { content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); width: 100px; height: 3px; background: linear-gradient(90deg, transparent, var(--color-gold), transparent); }
+
+    .pm-top p { max-width: 860px; margin: 1.5rem auto; font-family: var(--font-display); font-size: 1.2rem; font-style: italic; font-weight: 300; color: var(--color-burgundy); line-height: 1.8; opacity: 0.92; }
+
+    .pm-textblock { background: rgba(255,255,255,0.85); backdrop-filter: blur(10px); border: 1px solid rgba(212,175,55,0.25); border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 0 0 1px rgba(255,255,255,0.5) inset; padding: 2rem 2.5rem; margin: var(--section-gap) 0; opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+
+    .pm-textblock.revealed { opacity: 1; transform: translateY(0); }
+
+    .pm-textblock:hover { border-color: var(--color-gold); box-shadow: 0 15px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(212,175,55,0.3); }
+
+    .pm-textblock h2 { font-family: var(--font-display); font-size: 1.75rem; font-weight: 600; color: var(--color-burgundy); margin: 0 0 1.5rem; position: relative; padding-bottom: 0.75rem; }
+
+    .pm-textblock h2::after { content: ''; position: absolute; bottom: 0; left: 0; width: 60px; height: 3px; background: linear-gradient(90deg, var(--color-gold), transparent); }
+
+    .pm-textblock p { font-size: 1rem; line-height: 1.8; color: var(--color-dark); margin: 0 0 1rem; opacity: 0.92; }
+
+    .pm-textblock p:last-child { margin-bottom: 0; }
+
+    .pm-strong { font-weight: 600; color: var(--color-burgundy); }
+
+    .pm-nextchapter { margin-top: calc(var(--section-gap) * 1.5); }
+
+    .pm-photos { display: flex; flex-direction: column; gap: 2.5rem; margin: var(--section-gap) 0; }
+
+    .pm-photo { margin: 0; opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+
+    .pm-photo.revealed { opacity: 1; transform: translateY(0); }
+
+    .pm-photo img { width: 75%; max-width: 800px; height: auto; display: block; margin: 0 auto; border-radius: 20px; border: 2px solid var(--color-gold); box-shadow: 0 15px 40px rgba(0,0,0,0.12), 0 0 0 1px rgba(212,175,55,0.2); transition: all 0.4s ease; }
+
+    .pm-photo:hover img { transform: translateY(-8px) scale(1.02); box-shadow: 0 25px 60px rgba(0,0,0,0.18), 0 0 0 3px var(--color-gold); }
+
+    .pm-caption { padding: 1rem 1.5rem 0; font-size: 0.95rem; font-style: italic; color: var(--color-gray); line-height: 1.6; text-align: center; max-width: 600px; margin: 0 auto; }
+
+    .section-icon { display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; margin: 0 auto 1.5rem; border-radius: 50%; background: linear-gradient(135deg, var(--color-rose-light), var(--color-rose)); border: 2px solid var(--color-gold); color: var(--color-burgundy); }
+
+    .pm-textblock-with-icon { position: relative; text-align: center; }
+
+    /* ── Language switcher ── */
+    .lang-switcher { position: fixed; top: 16px; right: 20px; z-index: 10000; display: flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); border: 1px solid rgba(212,175,55,0.4); border-radius: 50px; padding: 5px 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .lang-btn { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 50px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; color: #7d1f31; transition: all 0.25s ease; border: none; background: transparent; cursor: pointer; }
+    .lang-btn:hover { background: rgba(212,175,55,0.15); }
+    .lang-btn.active { background: linear-gradient(135deg, #7d1f31, #5e1423); color: white; }
+    .lang-btn .flag { font-size: 1rem; line-height: 1; }
+    .lang-sep { width: 1px; height: 14px; background: rgba(212,175,55,0.4); }
+
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { animation: fadeInUp 0.8s ease-out forwards; }
+
+    @media (max-width: 900px) {
+      :root { --section-gap: 2rem; }
+      .pm-photo img { width: 90%; }
+      .pm-textblock { padding: 1.5rem 1.75rem; }
+    }
+    @media (max-width: 768px) {
+      .pm-top h1 { font-size: 2.25rem; }
+      .pm-top p { font-size: 1.05rem; }
+      .pm-textblock h2 { font-size: 1.5rem; }
+      .pm-textblock, .pm-photo { margin-left: 0; margin-right: 0; }
+    }
+    @media (max-width: 600px) {
+      .pm-page { padding: 0 1rem 3rem; }
+      .page-top { padding: 1.5rem 1rem 0; }
+      .pm-top h1 { font-size: 2rem; }
+      .pm-top p { font-size: 1rem; }
+      .pm-textblock { padding: 1.25rem 1.5rem; }
+      .pm-photo img { width: 95%; border-radius: 16px; }
+      .pm-caption { font-size: 0.9rem; padding: 0.75rem 1rem 0; }
+      .section-icon { width: 50px; height: 50px; margin-bottom: 1rem; }
+      .lang-switcher { top: 10px; right: 10px; padding: 4px 8px; }
+      .lang-btn { font-size: 0.72rem; padding: 3px 8px; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "GC Signature – Gérald Canet",
+    "description": "Master Pastry Chef & Chocolatier specialising in wedding cakes, croquembouche and bespoke creations in Mauritius.",
+    "url": "https://gc-signature.com",
+    "telephone": "+23055020109",
+    "priceRange": "Rs Rs",
+    "servesCuisine": "French Pastry",
+    "hasMap": "https://maps.google.com/?q=GC+Signature+Petit+Raffray+Mauritius",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Mauritius – North of the island"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Hills Villa, 8 Domaine de la Forêt des Pins",
+      "addressLocality": "Petit Raffray",
+      "addressRegion": "Rivière du Rempart",
+      "addressCountry": "MU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-19.9833",
+      "longitude": "57.5833"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "description": "Made to order only – minimum 48h notice"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=100063628180885",
+      "https://www.instagram.com/gcsignature230"
+    ],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bespoke wedding cakes" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Croquembouche" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entremets" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cocktail bites" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Macarons" } }
+    ]
+  }
+  </script>
+</head>
+
+<body role="application">
+
+  <!-- Language switcher -->
+  <div class="lang-switcher">
+    <a href="../../index.html" class="lang-btn"><span class="flag">🇫🇷</span> FR</a>
+    <div class="lang-sep"></div>
+    <a href="./index.html" class="lang-btn active"><span class="flag">🇬🇧</span> EN</a>
+  </div>
+
+  <div class="golden-particles" aria-hidden="true"></div>
+
+  <div class="page-top fade-in">
+    <a href="../../en/index.html" class="btn-qsj">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M15 8H1M7 14L1 8l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Home</span>
+    </a>
+  </div>
+
+  <div class="pm-page">
+
+    <!-- Title + intro -->
+    <div class="pm-top">
+      <h1>Wedding Cakes</h1>
+      <p>
+        A wedding cake is so much more than a dessert — it is a centrepiece, an emotion,
+        a moment you anticipate… and one you never forget.
+      </p>
+    </div>
+
+    <!-- Intro -->
+    <div class="pm-textblock pm-textblock-with-icon">
+      <div class="section-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h2>A bespoke creation</h2>
+      <p>Every piece is conceived in harmony with your world — your colours, your atmosphere, your style.</p>
+      <p class="pm-strong">Our goal: to create an unforgettable moment.</p>
+    </div>
+
+    <!-- Weddings -->
+    <div class="pm-textblock pm-textblock-with-icon">
+      <div class="section-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h2>Weddings</h2>
+      <p>We design together a piece that reflects your theme and your colours perfectly.</p>
+      <p class="pm-strong">A suspended moment and an eternal memory.</p>
+    </div>
+
+    <!-- Wedding gallery -->
+    <div class="pm-photos">
+      <div class="pm-photo">
+        <img src="../../images/montee-4.jpg" alt="Bespoke wedding cake" loading="lazy">
+        <div class="pm-caption">Details, finishes, harmony of colours.</div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/montee-2.jpg" alt="Elegant wedding cake creation" loading="lazy">
+        <div class="pm-caption">A piece conceived as a true centrepiece.</div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/montee-5.jpg" alt="Floral style wedding cake" loading="lazy">
+        <div class="pm-caption">Refinement, balance and personality.</div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/montee-3.jpg" alt="Wedding cake creation" loading="lazy">
+        <div class="pm-caption">Every creation is unique.</div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/pm-5.jpg" alt="Wedding cake – bespoke theme" loading="lazy">
+        <div class="pm-caption">Choose your theme… no limits to creativity.</div>
+      </div>
+    </div>
+
+    <!-- Events -->
+    <div class="pm-textblock pm-textblock-with-icon pm-nextchapter">
+      <div class="section-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+          <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h2>Events</h2>
+      <p>
+        Birthdays, christenings, communions and private celebrations.
+        Every creation is crafted with your ambiance in mind.
+      </p>
+      <p class="pm-strong">A selection of our creations:</p>
+    </div>
+
+    <!-- Events gallery -->
+    <div class="pm-photos">
+      <div class="pm-photo">
+        <img src="../../images/event-1.jpg" alt="Birthday celebration cake" loading="lazy">
+        <div class="pm-caption">Birthday: a joyful and refined creation.</div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/event-2.jpg" alt="Wedding anniversary cake" loading="lazy">
+        <div class="pm-caption">Diamond anniversary: when love stands the test of time.</div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/event-3.jpg" alt="Communion celebration cake" loading="lazy">
+        <div class="pm-caption">Children's theme: creativity and balance.</div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/event-4.jpg" alt="Family celebration cake" loading="lazy">
+        <div class="pm-caption">Family gathering: warmth and indulgence.</div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/event-5.jpg" alt="Private celebration cake" loading="lazy">
+        <div class="pm-caption">Private celebration: a truly bespoke moment.</div>
+      </div>
+
+      <div class="pm-photo">
+        <img src="../../images/event-6.jpg" alt="Christening cake" loading="lazy">
+        <div class="pm-caption">Christening: softness, delicacy and harmony.</div>
+      </div>
+    </div>
+
+    <!-- Back button -->
+    <div class="page-top" style="margin-top: 3rem;">
+      <div class="cta-qsj cta-qsj--global">
+        <span class="cta-line"></span>
+        <a href="../../en/index.html" class="btn-qsj">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M15 8H1M7 14L1 8l6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>Back to home</span>
+        </a>
+        <span class="cta-line"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/23055020109?text=Hello,%20I%20would%20like%20to%20get%20a%20quote%20for%20a%20pastry%20creation."
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor">
+      <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-.646-7.07-1.87l-.507-.292-4.713 1.262 1.262-4.669-.292-.508c-1.207-2.1-1.847-4.507-1.847-6.924 0-7.435 6.050-13.485 13.485-13.485s13.485 6.050 13.485 13.485c0 7.435-6.050 13.485-13.485 13.485zM21.960 18.735c-.347-.174-2.051-1.012-2.369-1.128-.318-.116-.549-.174-.780.174s-.897 1.128-1.099 1.360c-.202.231-.405.260-.751.087-.347-.174-1.464-.540-2.788-1.721-1.031-.919-1.727-2.054-1.929-2.401-.202-.347-.022-.535.152-.708.156-.155.347-.405.520-.607.174-.202.231-.347.347-.578.116-.231.058-.433-.029-.607s-.780-1.88-1.070-2.574c-.282-.676-.567-.584-.780-.595-.202-.010-.433-.012-.665-.012s-.607.087-.925.433c-.318.347-1.213 1.186-1.213 2.892s1.242 3.355 1.416 3.587c.174.231 2.445 3.733 5.922 5.235.827.357 1.473.571 1.977.731.831.263 1.586.226 2.183.137.666-.099 2.051-.839 2.340-1.649.289-.810.289-1.504.202-1.649s-.318-.231-.665-.405z"/>
+    </svg>
+    <span class="whatsapp-text">WhatsApp Quote</span>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => { entry.target.classList.add('revealed'); }, index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+      document.querySelectorAll('.pm-textblock, .pm-photo').forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
