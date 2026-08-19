@@ -743,6 +743,15 @@
       .prix-grid--4 .prix-cell { display: block !important; }
       .montee-photos { grid-template-columns: repeat(2, 1fr); }
     }
+
+    /* ── Sélecteur de langue ── */
+    .lang-switcher { position: fixed; top: 16px; right: 20px; z-index: 10000; display: flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.92); backdrop-filter: blur(10px); border: 1px solid rgba(212,175,55,0.4); border-radius: 50px; padding: 5px 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+    .lang-btn { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 50px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; color: #7d1f31; transition: all 0.25s ease; border: none; background: transparent; cursor: pointer; }
+    .lang-btn:hover { background: rgba(212,175,55,0.15); }
+    .lang-btn.active { background: linear-gradient(135deg, #7d1f31, #5e1423); color: white; }
+    .lang-btn .flag { font-size: 1rem; line-height: 1; }
+    .lang-sep { width: 1px; height: 14px; background: rgba(212,175,55,0.4); }
+    @media (max-width: 600px) { .lang-switcher { top: 10px; right: 10px; padding: 4px 8px; } .lang-btn { font-size: 0.72rem; padding: 3px 8px; } }
   </style>
   <script type="application/ld+json">
   {
@@ -791,6 +800,12 @@
 </head>
 
 <body role="application">
+  <!-- Sélecteur de langue -->
+  <div class="lang-switcher">
+    <a href="./index.html" class="lang-btn active"><span class="flag">🇫🇷</span> FR</a>
+    <div class="lang-sep"></div>
+    <a href="../en/tarifs/index.html" class="lang-btn"><span class="flag">🇬🇧</span> EN</a>
+  </div>
   <!-- Particules dorées décoratives -->
   <div class="golden-particles" aria-hidden="true"></div>
 
